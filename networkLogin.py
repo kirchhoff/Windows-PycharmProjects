@@ -4,7 +4,7 @@
 
 import requests
 import sys
-
+import time
 
 def login():
     """login work"""
@@ -18,5 +18,6 @@ def login():
     r = s.post('http://p.nju.edu.cn/portal_io/login', data=post_data, verify=False)
     print "log in, status = %s" % r.status_code
 
-if __name__ == '__main__':
+while True:
     login()
+    time.sleep(10)
